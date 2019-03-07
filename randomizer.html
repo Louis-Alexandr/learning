@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Movie Pitch App">
+		<meta name="keywords" content="movie, pitch">
+
+		<title>What's my movie about again?</title>
+		
+		<style>
+			
+			/* CSS stolen from previous file */	
+			body {
+				background: palegreen;
+				color: white;
+				width: 960px;
+				margin: 0 auto;
+				font-size: 80px;
+				color: #2F4F4F;
+			}
+
+			h1 {
+				font-size: 80px;
+				color: #333	;
+			}
+
+		</style>
+
+		<script>
+		
+			// Prompt for an actor name
+			var actor = prompt("Who did you cast as the main character again?");
+			var final = prompt("Do they die at the end?");
+
+			// A list of adjectives
+			var adjectives = [
+				'a drunk',
+				'an obese',
+				'a naked',
+				'an adventurous',
+				'an ambitious',
+				'a sensible',
+				'a cynical',
+				'a lazy'
+			];
+
+			// A list of jobs
+			var jobs = [
+			'lawyer',
+			'reporter',
+			'mattress seller',
+			'novelist',
+			'mayor',
+			'car driver',
+			'software engineer',
+			'teacher'
+			];
+			
+
+			// A list of actions
+			var actions = [
+				'sleeping',
+				'eating',
+				'walking',
+				'singing',
+				'dreaming',
+				'working',
+				'coding',
+				'taking a bath'
+			];
+
+			// A list of places
+			var places = [
+				'Paris',
+				'a bed',
+				'a car',
+				'an old couch',
+				'Venezuela',
+				'a haunted house',
+				'Tokyo',
+				'the airport'
+			];
+
+			// A list of characters
+			var characters = [
+				'a tiny grizzli with blue feet',
+				'a comedian dressed as a toaster',
+				'a very old lizzard with a crown',
+				'a one-legged clown with a worn hat',
+				'a domestic wolf painted in red',
+				'a rusted flying pan',
+				'a depressed folk singer',
+				'a giant talking spoon'
+				];
+
+			// A list of unexpected events
+			var events = [
+				'jumps on',
+				'throws a bone at',
+				'rolls over',
+				'cast a spell on',
+				'writes a story about',
+				'cleans up a table in front of',
+				'takes a wooden stick and waves at',
+				'starts screaming at'
+				];
+
+			//Conditionals for the ending
+			if(final==="Yes")
+				{
+					var endings = [actor + " gets sucked into a black hole and dies.",
+					actor + " gets stuck in a car and dies.",
+					actor + " trips on a rock in the desert and dies.",
+					actor + " doesn't mind the gap between the train and the platform and dies."
+					];
+				}
+			else if(final==="No")
+				{
+					var endings = [actor + " lives.",
+					actor + " lives.",
+					actor + " lives.",
+					actor + " lives."] ;
+				}
+			else {
+					var endings = ['Nothing happens to ' + actor,
+					actor + " disappears but no one knows where and no one cares.",
+					"maybe " + actor + " died, yet maybe " + actor + " lives.",
+					actor + " gets stuck in a Rick and Morty episode."];
+				}
+			
+			//Randomizer for each var
+			var adjective = adjectives[Math.floor(Math.random() * 8)];
+			var job = jobs[Math.floor(Math.random() * 8)];
+			var action = actions[Math.floor(Math.random() * 8)];
+			var place = places[Math.floor(Math.random() * 8)];
+			var character = characters[Math.floor(Math.random() * 8)];
+			var event = events[Math.floor(Math.random() * 8)];
+			var ending = endings[Math.floor(Math.random() * 3)];
+			
+			//Write the story
+			document.write("In this movie, "+ adjective + " " + job + " played by " + actor + " is " + action + " in " + place + ", when suddenly " + character + " " + event + " " + actor + ", and then " + ending);
+		
+		</script>
+	</head>
+	<body>
+		<!-- PAGE CONTENT WILL BE PRINTED HERE --> 
+	</body>
+</html>
